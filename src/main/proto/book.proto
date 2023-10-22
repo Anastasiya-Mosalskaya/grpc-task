@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package org.epam.grpctask;
+
+option java_multiple_files = true;
+
+service BookService {
+	rpc getBook(BookRequest) returns (BookResponse);
+}
+
+message BookRequest {
+	int32 id = 1;
+}
+
+message BookResponse {
+	int32 id = 1;
+	string name = 2;
+	string author = 3;
+}
